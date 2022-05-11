@@ -1,0 +1,12 @@
+@mixin centerflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$color-1: #ffffff;
+
+.footer{
+    background-color:$color-1;
+    @include centerflex;
+}
