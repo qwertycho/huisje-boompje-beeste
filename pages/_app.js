@@ -1,5 +1,5 @@
 // import styles from '../styles/globals.css'
-import Footer from '../components/footer'
+// import Footer from '../components/footer'
 
 function MyApp({ Component, pageProps }) {
   return (
