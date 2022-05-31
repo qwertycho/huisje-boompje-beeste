@@ -1,0 +1,12 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.bg-top{
+  background-image:linear-gradient(to right, #000000a1, #000000a1) , url("../img/main-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
