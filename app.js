@@ -6,6 +6,7 @@ const ejs = require('ejs');
 var fs = require('fs');
 const port = 80;
 
+app.use(express.static(__dirname + '/public'));
 
 // dynamische rout gebaseerd op de param in de url
 app.get('/:id', function (req, res) {
