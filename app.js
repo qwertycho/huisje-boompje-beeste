@@ -9,7 +9,7 @@ const port = 3000;
 app.get('/', function (req, res) {
 
 	// Render page using renderFile method
-	ejs.renderFile('pages/contact.ejs', {},
+	ejs.renderFile('pages/index.ejs', {},
 		{}, function (err, template) {
 		if (err) {
 			throw err;
