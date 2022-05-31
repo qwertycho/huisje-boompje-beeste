@@ -1,3 +1,9 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 .bg-top {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.631372549), rgba(0, 0, 0, 0.631372549)), url("../img/main-bg.jpg");
   background-position: bottom;
