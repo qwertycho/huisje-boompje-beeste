@@ -1,0 +1,7 @@
+.bg-top {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.631372549), rgba(0, 0, 0, 0.631372549)), url("../img/main-bg.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
