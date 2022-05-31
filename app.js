@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 var fs = require('fs');
-const port = 80;
+const port = 8000;
 
 
 // dynamische rout gebaseerd op de param in de url
