@@ -4,13 +4,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/tailwind.js"></script>
     <title>Villas 4 U</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5d4a18d08e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .h-full{
+                height: 800px;
+            }
+
+            .h-half{
+                height: 1400px;
+            }
+
+            .h-small{
+                height: 3000px;
+            }
+
+            .grid-rows-7{
+                grid-template-rows: repeat(7, minmax(0, 1fr));
+            }
+
+            .grid-rows-8{
+                grid-template-rows: repeat(8, minmax(0, 1fr));
+            }
+
+            .grid-rows-9{
+                grid-template-rows: repeat(9, minmax(0, 1fr));
+            }
+
+            .grid-rows-10{
+                grid-template-rows: repeat(10, minmax(0, 1fr));
+            }
+        }
+    </style>
 </head>
-<body>
-    <%- include('include/header') %>
+<body class="min-h-screen">
+    <header class="h-28 w-full bg-top bg-center grid grid-cols-1 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+        <div class="flex flex-col justify-center items-center col-span-1">
+            <img src="img/logo.svg" alt="" class="h-16">
+        </div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="flex flex-row justify-center items-center">
+            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
+            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Contact</a>
+        </div>
+    </header>
+    <main class="grid lg:grid-rows-2 lg:grid-cols-3 sm:grid-rows-3 sm:grid-cols-2 grid-cols-1 grid-rows-6 sm:max-w-xl lg:max-w-4xl mx-auto sm:h-half lg:h-full gap-5 mt-8 h-small max-w-xs">
+        <a href="" id="card1" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis-1/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">€ 3.200.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 AA Muiden, Nr. 60</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">5</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
+        <a href="" id="card2" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis-2/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">€ 3.150.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 AA Muiden, Nr. 1</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">5</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
 
-    Hiero de contento van de indexio
+        <a href="" id="card3" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis-3/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Villa, Hoekwoning • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">€ 2.500.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 CP Muiden, Nr. 4.1</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">3</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">3</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
+        <a href="" id="card4" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis-4/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">2.800.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 AA Muiden, Nr. 40</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">5</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
+        <a href="" id="card5" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis5.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">€ 2.700.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 AA Muiden, Nr. 8</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">5</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
+        <a href="" id="card6" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+            <img src="img/huis6.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Vrijstaande Villa • Bouwjaar 2022</div>
+            <div class="font-bold text-3xl items-center ml-1 flex">€ 1.900.000</div>
+            <div class="font-bold text-m items-center ml-1 flex">1398 CP Muiden, Nr. 28</div>
+            <div class="bg-white grid grid-cols-2 grid-rows-1">
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bed ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">4</b> <span class="text-sm">slaapkamers</span>
+                </div>
+                <div class="flex items-center justify-center text-s">
+                    <i class="fa-solid fa-bath ml-1"></i>
+                    <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                </div>
+            </div>
+        </a>
 
-    <%- include('include/footer') %>
+
+    </main>
+    <footer class="mt-10 flex justify-center items-center bg-black flex-col">
+        <div class="text-2xl text-white  pt-10">© TheSatanicFlame, Qwertycho & Remco - 2022</div> br
+        <div class="text-2xl text-white  pb-10">All Rights Reserved</div>
+    </footer>
 </body>
 </html>
