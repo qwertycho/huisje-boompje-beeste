@@ -1,26 +1,28 @@
-// data import
 import db from './database.js';
 
 // get the url parameters
 const queryString = window.location.search;
 let paramString = queryString.split('?');
 
+console.log(paramString[1]);
+
 // zoeken naar het juiste huis in de database
+try {
 let huis = paramString[1];
 if (huis == undefined) {
     huis = "index";
 } else{
     // huis omzetten naar het huis object
     for (let i = 0; i < db.length; i++) {
+        console.log(db[i].naam);
+
         if (db[i].naam == huis) {
             huis = db[i];
-            break;
         }
     }
 }
 
 // de gegevens op de pagina invullen vanuit huis object
-try{
 const titel = document.getElementById('titel');
 const adres = document.getElementById('adres');
 const prijs = document.getElementById('prijs');
