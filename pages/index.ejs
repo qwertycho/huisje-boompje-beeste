@@ -56,17 +56,7 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <header class="h-28 w-full bg-top bg-center grid grid-cols-1 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-        <div class="flex flex-col justify-center items-center col-span-1">
-            <img src="img/logo.svg" alt="" class="h-16">
-        </div>
-        <div class="hidden lg:block"></div>
-        <div class="hidden lg:block"></div>
-        <div class="flex flex-row justify-center items-center">
-            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
-            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Contact</a>
-        </div>
-    </header>
+    <%- include('../public/components/header.ejs') %>
     <main class="grid lg:grid-rows-2 lg:grid-cols-3 sm:grid-rows-3 sm:grid-cols-2 grid-cols-1 grid-rows-6 sm:max-w-xl lg:max-w-4xl mx-auto sm:h-half lg:h-full gap-5 mt-8 h-small max-w-xs">
         <a href="" id="card1" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
             <img src="img/huis-1/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
@@ -168,9 +158,6 @@
 
 
     </main>
-    <footer class="mt-10 flex justify-center items-center bg-black flex-col">
-        <div class="text-2xl text-white  pt-10">© TheSatanicFlame, Qwertycho & Remco - 2022</div> br
-        <div class="text-2xl text-white  pb-10">All Rights Reserved</div>
-    </footer>
+    <%- include('../public/components/footer.ejs') %>
 </body>
 </html>
