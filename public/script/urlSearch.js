@@ -11,6 +11,8 @@ var huis = paramString[1];
 console.log("string: " + huis);
 if (huis == undefined || huis == "") {
   console.log("geen huis gevonden");
+  document.getElementById("kop").innerHTML = "Selecteer een huis";
+
   // create a dropdown list
   const huisSelector = document.createElement("select");
   huisSelector.id = "huisSelector";
@@ -27,6 +29,7 @@ if (huis == undefined || huis == "") {
     huisSelector.appendChild(option);
   }
   document.querySelector("main").appendChild(huisSelector);
+
 } else {
   // huis omzetten naar het huis object
   for (let i = 0; i < db.length; i++) {
@@ -58,6 +61,40 @@ document.getElementById("kop").innerHTML = huis.naam;
     document.querySelector("main").appendChild(contact);
 
   fotos.style.backgroundImage = "url(" + huis.fotos[0] + ")";
-}
-document.getElementById("kop").innerHTML = "Selecteer een huis";
 
+//   copilot momentje
+//   contact form aanmaken
+    const contactForm = document.createElement("form");
+    contactForm.id = "contactForm";
+    contactForm.name = "contactForm";
+    contactForm.className = "contactForm";
+    contactForm.action = "contact";
+    contactForm.method = "post";
+    
+
+    const naam = document.createElement("input");
+    naam.id = "naam";
+    naam.name = "naam";
+    naam.type = "text";
+    naam.placeholder = "Naam";
+    contactForm.appendChild(naam);
+    const email = document.createElement("input");
+    email.id = "email";
+    email.name = "email";
+    email.type = "text";
+    email.placeholder = "Email";
+    contactForm.appendChild(email);
+    const bericht = document.createElement("textarea");
+    bericht.id = "bericht";
+    bericht.name = "bericht";
+    bericht.placeholder = "Bericht";
+    contactForm.appendChild(bericht);
+    const submit = document.createElement("input");
+    submit.id = "submit";
+    submit.name = "submit";
+    submit.type = "submit";
+    submit.value = "Verzenden";
+    contactForm.appendChild(submit);
+    document.querySelector("main").appendChild(contactForm);
+
+}
