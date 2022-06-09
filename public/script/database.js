@@ -1,28 +1,28 @@
 
-let huis1 = {
-    naam: "Huis1",
-    adres: "Adres 1",
-    prijs: "€100.000",
-    fotos: ["img/huis1.jpg", "img/huis2.jpg", "img/huis3.jpg"],
+let Dijkvilla1 = {
+    naam: "Dijkvilla1",
+    adres: "1398 AA Muiden",
+    prijs: "€3200000",
+    fotos: ["img/huis-1/1.jpg", "img/huis-1/2.jpg", "img/huis-1/3.jpg"],
     contact: "verkoper1",
 }
 
-let huis2 = {
-    naam: "Huis2",
-    adres: "Adres 2",
-    prijs: "€100.000",
-    fotos: ["img/huis2.jpg", "img/huis2.jpg", "img/huis2.jpg"],
+let Dijkvilla2 = {
+    naam: "Dijkvilla2",
+    adres: "1398 AA Muiden",
+    prijs: "€3150000",
+    fotos: ["img/huis-2/1.jpg", "img/huis-2/2.jpg", "img/huis-2/3.jpg"],
     contact: "verkoper1",
 }
 
-let huis3 = {
-    naam: "Huis3",
-    adres: "Adres 3",
-    prijs: "€100.000",
-    fotos: ["img/huis3.jpg", "img/huis3.jpg", "img/huis3.jpg"],
+let Hoekwoning = {
+    naam: "Hoekwoning",
+    adres: "1398 CP Muiden",
+    prijs: "€2500000",
+    fotos: ["img/huis-3/1.jpg", "img/huis-3/2.jpg", "img/huis-3/3.jpg"],
     contact: "verkoper1",
 }
 
-const db = [huis1, huis2, huis3];
+const db = [Dijkvilla1, Dijkvilla2, Hoekwoning];
 
 export default db;
