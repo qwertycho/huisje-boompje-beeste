@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/public'));
 // dynamische rout gebaseerd op de param in de url
 app.get('/:id', function (req, res) {
 
-	ejs.renderFile('pages/' + req.params.id, {},
+	ejs.renderFile('pages/' + req.params.id + ".ejs", {},
 		{}, function (err, template) {
 		if (err) {
 			throw err;
