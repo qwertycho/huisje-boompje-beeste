@@ -8,6 +8,41 @@ const port = 3000;
 
 app.use(express.static(__dirname + '/public'));
 
+
+app.get('/data', function (req, res) {
+
+	var sqlite3 = require('sqlite3').verbose();
+
+	try {
+	  var db = new sqlite3.Database("./public/script/data.db");
+	} catch (err) {
+	  console.log(err);
+	}
+
+	function accessData(){
+		db.each("SELECT * FROM formdata", function(err, row) {
+			if(err) return console.log(err.message);
+			console.log(row);
+		});
+	}
+
+	
+	accessData();
+
+	db.close();
+
+
+	// Render page using renderFile method
+	ejs.renderFile('pages/index.ejs', {},
+		{}, function (err, template) {
+		if (err) {
+			throw err;
+		} else {
+			res.end(template);
+		}
+	});
+});
+
 // dynamische rout gebaseerd op de param in de url
 app.get('/:id', function (req, res) {
 
@@ -20,6 +55,8 @@ app.get('/:id', function (req, res) {
 		}
 	});
 });
+
+
 
 
 // harde route naar pagina
@@ -35,6 +72,10 @@ app.get('/', function (req, res) {
 		}
 	});
 });
+
+
+
+
 
 // Server setup
 app.listen(port, function (error) {
