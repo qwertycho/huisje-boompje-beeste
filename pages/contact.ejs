@@ -49,7 +49,7 @@
         <div class="hidden lg:block"></div>
         <div class="hidden lg:block"></div>
         <div class="flex flex-row justify-center items-center">
-            <a href="index" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
+            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
             <a href="/contact" class="text-white text-2xl hover:text-slate-300 mx-8">Contact</a>
         </div>
     </header>
@@ -86,14 +86,59 @@
 
     </section>
 
-    <section id="form-section" class="bg-black  mx-auto rounded-xl mt-12 w-9/12 text-white" style="height: 40rem">
+    <section id="form-section" class="bg-black  mx-auto rounded-xl mt-12 w-9/12 text-white" style="height: 25rem">
         <div class="text-3xl text-center">Contactformulier</div>
-        <div id="the-grid-of-form" class="grid grid-rows-1 grid-cols-3 mx-auto" style="height: 35rem; width: 80%">
-            <div class="col-span-2">
+        <div id="the-grid-of-form" class="grid grid-rows-1 grid-cols-3 mx-auto gap-2" style="height: 20rem; max-width: 80%">
+            <div class=" col-span-3 lg:col-span-2">
+                <table class="w-full" style="">
+                    <tr>
+                        <td class="lg:w-48">Vooraam</td>
+                        <td><input type="text" name="name" id="name" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Achternaam</td>
+                        <td><input type="text" name="sirname" id="sirname" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">E-mail</td>
+                        <td><input type="text" name="email" id="email" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Gekozen villa:</td>
+                        <td class="text-black my-2"><select name="villa" id="villa">
+                            <option value="villa1">1398 AA Muiden, Nr. 60</option>
+                            <option value="villa2">1398 AA Muiden, Nr. 1</option>
+                            <option value="villa3">1398 CP Muiden, Nr. 4.1</option>
+                            <option value="villa4">1398 AA Muiden, Nr. 40</option>
+                            <option value="villa5">1398 AA Muiden, Nr. 8</option>
+                            <option value="villa6">1398 CP Muiden, Nr. 28</option>
+                        </select></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="lg:w-48">Bod in €</td>
+                        <td><input type="text" name="bod" id="bod" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Bericht</td>
+                        <td><textarea name="message" id="message" class="w-full border-2 border-white rounded-lg my-2"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48"></td>
+                        <td><button id="submit" class="w-full bg-white text-black border-2 border-black rounded-lg my-2">Verzenden</button></td>
+                    </tr>
+
+                </table>
+
 
             </div>
-            <div class="">
+            <div class="lg:grid grid-cols-1 grid-rows-2 hidden gap-2">
+                <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(img/huis-1/1.jpg)">
 
+                </div>
+                <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(img/huis-1/2.jpg)">
+
+                </div>
             </div>
         </div>
     </section>
