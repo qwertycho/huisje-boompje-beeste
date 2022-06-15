@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -52,13 +53,23 @@
             .grid-rows-10{
                 grid-template-rows: repeat(10, minmax(0, 1fr));
             }
+
+            .card-3-house{
+                background-image: url("img/huis-3/1.jpg");
+                background-size: cover;
+            }
+
+            .card-6-house{
+                background-image: url("img/huis6.jpg");
+                background-size: cover;
+            }
         }
     </style>
 </head>
 <body class="min-h-screen">
     <%- include('../public/components/header.ejs') %>
     <main class="grid lg:grid-rows-2 lg:grid-cols-3 sm:grid-rows-3 sm:grid-cols-2 grid-cols-1 grid-rows-6 sm:max-w-xl lg:max-w-4xl mx-auto sm:h-half lg:h-full gap-5 mt-8 h-small max-w-xs">
-        <a href="" id="card1" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
+        <a href="huis1" id="card1" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
             <img src="img/huis-1/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
             <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
             <div class="font-bold text-3xl items-center ml-1 flex">€ 3.200.000</div>
@@ -92,7 +103,7 @@
         </a>
 
         <a href="" id="card3" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
-            <img src="img/huis-3/1.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="row-span-4 object-cover m-h-full w-full object-fill card-3-house"> </div>
             <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Villa, Hoekwoning • Bouwjaar 2022</div>
             <div class="font-bold text-3xl items-center ml-1 flex">€ 2.500.000</div>
             <div class="font-bold text-m items-center ml-1 flex">1398 CP Muiden, Nr. 4.1</div>
@@ -140,7 +151,7 @@
             </div>
         </a>
         <a href="" id="card6" class="rounded-3xl grid grid-cols-1 grid-rows-8 bg-gray-200 overflow-hidden shadow-md">
-            <img src="img/huis6.jpg" class="row-span-4 object-cover max-h-full w-full"/>
+            <div class="row-span-4 object-cover max-h-full w-full card-6-house"> </div>
             <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Vrijstaande Villa • Bouwjaar 2022</div>
             <div class="font-bold text-3xl items-center ml-1 flex">€ 1.900.000</div>
             <div class="font-bold text-m items-center ml-1 flex">1398 CP Muiden, Nr. 28</div>
