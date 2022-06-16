@@ -13,7 +13,50 @@ app.use(express.json({
 	type: ['application/json', 'text/plain']
   }))
 
+//   dashboard shit
+let cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 app.use(express.static(__dirname + '/public'));
+
+app.get('/dashboard', function (req, res) {
+
+	console.log(req.cookies);
+	if (req.cookies == undefined) {
+		ejs.renderFile('pages/dashboard/login.ejs', {},
+		{}, function (err, template) {
+		if (err) {
+			throw err;
+		} else {
+			res.end(template);
+		}
+	});
+	}
+	else{
+		ejs.renderFile('pages/dashboard/adminview.ejs', {},
+		{}, function (err, template) {
+		if (err) {
+			throw err;
+		} else {
+			res.end(template);
+		}
+	});
+	}
+
+	
+});
+
+app.get('/login', function (req, res) {
+
+	ejs.renderFile('pages/dashboard/login.ejs', {},
+		{}, function (err, template) {
+		if (err) {
+			throw err;
+		} else {
+			res.end(template);
+		}
+	});
+});
 
 
 app.post('/data', function (req, res) {
