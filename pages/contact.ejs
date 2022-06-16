@@ -4,16 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villas 4 U | Contact</title>
-    <script src="script/urlSearch.js" type="module"></script>
-    <script src="script/database.js" type="module"></script>
+    <script src="script/tailwind.js"></script>
+    <title>Villas 4 U</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5d4a18d08e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <script src="/script/urlSearch.js" type="module"></script> -->
+    <script src="/script/form.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .h-full{
+                height: 800px;
+            }
+            .h-half{
+                height: 1400px;
+            }
+            .h-small{
+                height: 3000px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <div id="titel"></div>
-   <div id="adres"></div>
-   <div id="prijs"></div>
-   <div id="fotos"></div>
-   <div id="contact"></div>
+    <header class="h-28 w-full bg-top bg-center grid grid-cols-1 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
+        <div class="flex flex-col justify-center items-center col-span-1">
+            <img src="img/logo.svg" alt="" class="h-16">
+        </div>
+        <div class="hidden lg:block"></div>
+        <div class="hidden lg:block"></div>
+        <div class="flex flex-row justify-center items-center">
+            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
+            <a href="/contact" class="text-white text-2xl hover:text-slate-300 mx-8">Contact</a>
+        </div>
+    </header>
+    <section id="location" class="mx-auto w-9/12 bg-black mt-3 h-80 rounded-lg grid grid-rows-1 grid-cols-2">
+        <div id="contactinfo">
+            <table class="text-white text-xl mx-auto h-48" style="margin-top: 8%">
+                <tr>
+                    <td><i class="fa-solid fa-map-pin text-white text-xl"></i> &nbsp; &nbsp; &nbsp;</td>
+                    <td class="text-white text-xl">Villa's 4 U</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Heer Bokelweg 255</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>3032AD Rotterdam</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-envelope"></i></td>
+                    <td>info@villa4u.nl</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-phone"></i></td>
+                    <td>06-12345678</td>
+                </tr>
+            </table>
+        </div>
+        <iframe class="h-64 w-11/12 mx-auto my-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.3569086933135!2d4.475184415963144!3d51.92744318772457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c434a8485bda7d%3A0x5d89cc9d1d5c201a!2sGrafisch%20Lyceum%20Rotterdam!5e0!3m2!1snl!2snl!4v1654769598409!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+    </section>
+
+    <section id="form-section" class="bg-black  mx-auto rounded-xl mt-12 w-9/12 text-white" style="height: 25rem">
+        <div class="text-3xl text-center">Contactformulier</div>
+        <div id="the-grid-of-form" class="grid grid-rows-1 grid-cols-3 mx-auto gap-2" style="height: 20rem; max-width: 80%">
+            <div class=" col-span-3 lg:col-span-2">
+                <table class="w-full" style="">
+                    <tr>
+                        <td class="lg:w-48">Vooraam</td>
+                        <td><input required type="text" name="name" id="name" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Achternaam</td>
+                        <td><input required type="text" name="sirname" id="sirname" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">E-mail</td>
+                        <td><input required type="text" name="email" id="email" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Gekozen villa:</td>
+                        <td class="text-black my-2"><select name="villa" id="villa">
+                            <option value="villa1">1398 AA Muiden, Nr. 60</option>
+                            <option value="villa2">1398 AA Muiden, Nr. 1</option>
+                            <option value="villa3">1398 CP Muiden, Nr. 4.1</option>
+                            <option value="villa4">1398 AA Muiden, Nr. 40</option>
+                            <option value="villa5">1398 AA Muiden, Nr. 8</option>
+                            <option value="villa6">1398 CP Muiden, Nr. 28</option>
+                        </select></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="lg:w-48">Bod in €</td>
+                        <td><input required type="number" name="bod" id="bod" class="w-full border-2 border-white rounded-lg my-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48">Bericht</td>
+                        <td><textarea required name="message" id="message" class="w-full border-2 border-white rounded-lg my-2"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="lg:w-48"></td>
+                        <td><button id="submit" class="w-full bg-white text-black border-2 border-black rounded-lg my-2">Verzenden</button></td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+            <div class="lg:grid grid-cols-1 grid-rows-2 hidden gap-2">
+                <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(img/huis-1/1.jpg)">
+
+                </div>
+                <div class="bg-center bg-no-repeat bg-cover" style="background-image:url(img/huis-1/2.jpg)">
+
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
