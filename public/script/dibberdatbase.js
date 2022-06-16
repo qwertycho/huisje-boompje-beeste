@@ -1,31 +1,33 @@
 function accessData(){
+    const input = document.createElement("input");
+
     db.each("SELECT * FROM formdata", function(err, row) {
     if(err) return console.log(err.message);
-    let idNaam = document.createelement();
+    let idNaam = document.createElement();
     idNaam.innerHTML = row.naam;
     document.appendChild(idNaam);
 
-    let voorNaam = document.createelement();
+    let voorNaam = document.createElement();
     voorNaam.innerHTML = row.naam;
     document.appendChild(voorNaam);
 
-    let achterNaam = document.createelement();
+    let achterNaam = document.createElement();
     achterNaam.innerHTML = row.naam;
     document.appendChild(achterNaam);
 
-    let email = document.createelement();
+    let email = document.createElement();
     email.innerHTML = row.naam;
     document.appendChild(email);
 
-    let bericht= document.createelement();
+    let bericht= document.createElement();
     bericht.innerHTML = row.naam;
     document.appendChild(bericht);
 
-    let bod = document.createelement();
+    let bod = document.createElement();
     bod.innerHTML = row.naam;
     document.appendChild(bod);
 
-    let villa = document.createelement();
+    let villa = document.createElement();
     villa.innerHTML = row.naam;
     document.appendChild(villa);
     });
