@@ -52,6 +52,10 @@ app.post('/data', function (req, res) {
 		console.log("Data inserted successfully...");
 	}
 
+	function writeData() {
+		document.getElementById("dataTabel").innerHTML = ""
+	}
+
 	db.close();
 
 });
