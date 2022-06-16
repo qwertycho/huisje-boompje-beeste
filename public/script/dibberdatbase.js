@@ -1,7 +1,16 @@
+var sqlite3 = require('sqlite3').verbose();
+
+try {
+    var db = new sqlite3.Database("data.db");
+  } catch (err) {
+    console.log(err);
+  }
+
 function accessData(){
     const input = document.createElement("input");
 
     db.each("SELECT * FROM formdata", function(err, row) {
+
     if(err) return console.log(err.message);
     let idNaam = document.createElement();
     idNaam.innerHTML = row.naam;
