@@ -95,9 +95,21 @@ app.post('/data', function (req, res) {
 		console.log("Data inserted successfully...");
 	}
 
-	db.close();
-
+	shareData();
 });
+
+	function shareData() {
+		let myData = db.each("SELECT * FROM formdata VALUES (?,?,?,?,?,?,?)");
+
+		const xmlhttp = new XMLHttpRequest();
+
+		//de ajax fucntie voor sturen
+		xmlhttp.open("POST", "/json-handler");
+		xmlhttp.setRequestHeader("Content-Type", "application/json");
+		xmlhttp.send(JSON.stringify(myData));
+
+	db.close();
+	}
 
 // dynamische rout gebaseerd op de param in de url
 app.get('/:id', function (req, res) {
