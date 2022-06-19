@@ -6,7 +6,7 @@ const bericht = document.getElementsByClassName("bericht");
 const bod = document.getElementsByClassName("bod");
 const villa = document.getElementsByClassName("villa");
 
-windows.onload = fetch();
+window.onload = fetch();
 
 function fetch() {
     const xmlhttp = new XMLHttpRequest();
@@ -15,27 +15,27 @@ function fetch() {
 
     xmlhttp.onload = function() {
         const object = JSON.parse(this.responseText);
-        Array.from(id).forEach(id, index) => {
-            id.innerText = obj.myData[index].id;
-        }
-        Array.from(naam).forEach(naam, index) => {
-            naam.innerText = obj.myData[index].naam;
-        }
-        Array.from(achternaam).forEach(achternaam, index) => {
-            achternaam.innerText = obj.myData[index].achternaam;
-        }
-        Array.from(email).forEach(email, index) => {
-            email.innerText = obj.myData[index].email;
-        }
-        Array.from(bericht).forEach(bericht, index) => {
-            bericht.innerText = obj.myData[index].bericht;
-        }
-        Array.from(bod).forEach(bod, index) => {
-            bod.innerText = obj.myData[index].bod;
-        }
-        Array.from(villa).forEach(villa, index) => {
-            villa.innerText = obj.myData[index].villa;
-        }
+        Array.from(id).forEach((id, index) => {
+            id.innerText = object.myData[index].id;
+        });
+        Array.from(naam).forEach((naam, index) => {
+            naam.innerText = object.myData[index].naam;
+        });
+        Array.from(achternaam).forEach((achternaam, index) => {
+            achternaam.innerText = object.myData[index].achternaam;
+        });
+        Array.from(email).forEach((email, index) => {
+            email.innerText = object.myData[index].email;
+        });
+        Array.from(bericht).forEach((bericht, index) => {
+            bericht.innerText = object.myData[index].bericht;
+        });
+        Array.from(bod).forEach((bod, index) => {
+            bod.innerText = object.myData[index].bod;
+        });
+        Array.from(villa).forEach((villa, index) => {
+            villa.innerText = object.myData[index].villa;
+        });
     }
 
     xmlhttp.send();
