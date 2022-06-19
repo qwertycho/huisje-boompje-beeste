@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 var fs = require('fs');
-const port = 8000;
+const port = 5500;
 
 // voor post request
 var myParser = require("body-parser");
