@@ -10,33 +10,43 @@ window.onload = fetch();
 
 function fetch() {
     const xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "myData.json", true);
+    xmlhttp.open("GET", "/datar", true);
     xmlhttp.getResponseHeader("Content-type", "application/json");
 
     xmlhttp.onload = function() {
-        const object = JSON.parse(this.responseText);
-        Array.from(id).forEach((id, index) => {
-            id.innerText = object.myData[index].id;
-        });
-        Array.from(naam).forEach((naam, index) => {
-            naam.innerText = object.myData[index].naam;
-        });
-        Array.from(achternaam).forEach((achternaam, index) => {
-            achternaam.innerText = object.myData[index].achternaam;
-        });
-        Array.from(email).forEach((email, index) => {
-            email.innerText = object.myData[index].email;
-        });
-        Array.from(bericht).forEach((bericht, index) => {
-            bericht.innerText = object.myData[index].bericht;
-        });
-        Array.from(bod).forEach((bod, index) => {
-            bod.innerText = object.myData[index].bod;
-        });
-        Array.from(villa).forEach((villa, index) => {
-            villa.innerText = object.myData[index].villa;
-        });
-    }
 
-    xmlhttp.send();
-}
+        
+
+        let data = JSON.parse(this.responseText);
+
+        console.log(data);
+
+        for(let i = 0; i < data.length; i++){
+            console.log(i);
+            const naamElem = document.createElement("div")
+            naamElem.innerHTML = data[i].naam;
+            document.body.appendChild(naamElem);
+
+            const surElem = document.createElement("div")
+            surElem.innerHTML = data[i].surname;
+            document.body.appendChild(surElem);
+
+            const emailElem = document.createElement("div")
+            emailElem.innerHTML = data[i].email;
+            document.body.appendChild(emailElem);
+
+            const berichtElem = document.createElement("div")
+            berichtElem.innerHTML = data[i].bericht;
+            document.body.appendChild(berichtElem);
+
+            const bodElem = document.createElement("div")
+            bodElem.innerHTML = data[i].bod;
+            document.body.appendChild(bodElem);
+
+            const villaElem = document.createElement("div")
+            villaElem.innerHTML = data[i].villa;
+            document.body.appendChild(villaElem);
+        };
+        }
+        xmlhttp.send();
+    }

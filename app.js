@@ -19,6 +19,58 @@ app.use(cookieParser());
 
 app.use(express.static(__dirname + '/public'));
 
+app.get('/datar', function (req, res) {
+
+	var sqlite3 = require('sqlite3').verbose();
+
+	try {
+	  var db = new sqlite3.Database("./public/script/data.db");
+	} catch (err) {
+	  console.log(err);
+	}
+
+	let ID = 999;
+
+	db.each("SELECT * FROM formdata ORDER BY ID DESC LIMIT 1", function(err, row) {
+		if(err) return console.log(err.message);
+		ID = row.ID;
+		ID++;
+		console.log("id = " + ID);
+	});
+
+	class dbData {
+		constructor(naam, surname, email, bericht, bod, villa){
+			this.naam = naam;
+			this.surname = surname;
+			this.email = email;
+			this.bericht = bericht;
+			this.bod = bod;
+			this.villa = villa;
+		}
+	}
+
+	let array = [];
+let i = 0;
+	db.each("SELECT * FROM formdata", function(err, row) {
+		if(err) return console.log(err.message);
+		let data =  new dbData(row.naam, row.surname, row.email, row.bericht, row.bod, row.villa);
+		array.push(data);
+		i++;
+		if(array.length == ID){
+			if(res.headersSent !== true) {
+				console.log(array);
+				res.send(JSON.stringify(array));
+			}
+		} else{
+			console.log("bergkip" + i);
+		}
+	});
+
+db.close(); 
+
+});
+
+
 app.get('/dashboard', function (req, res) {
 
 	console.log(req.cookies);
@@ -59,6 +111,8 @@ app.get('/login', function (req, res) {
 });
 
 
+
+
 app.post('/data', function (req, res) {
 
 	console.log(req.body);
@@ -95,21 +149,9 @@ app.post('/data', function (req, res) {
 		console.log("Data inserted successfully...");
 	}
 
-	shareData();
 });
 
-	function shareData() {
-		let myData = db.each("SELECT * FROM formdata VALUES (?,?,?,?,?,?,?)");
-
-		const xmlhttp = new XMLHttpRequest();
-
-		//de ajax fucntie voor sturen
-		xmlhttp.open("POST", "/json-handler");
-		xmlhttp.setRequestHeader("Content-Type", "application/json");
-		xmlhttp.send(JSON.stringify(myData));
-
-	db.close();
-	}
+	
 
 // dynamische rout gebaseerd op de param in de url
 app.get('/:id', function (req, res) {
