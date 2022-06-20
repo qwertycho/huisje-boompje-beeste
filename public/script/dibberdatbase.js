@@ -25,27 +25,27 @@ function fetch() {
             console.log(i);
             const naamElem = document.createElement("div")
             naamElem.innerHTML = data[i].naam;
-            document.body.appendChild(naamElem);
+            document.getElementById("content").appendChild(naamElem);
 
             const surElem = document.createElement("div")
             surElem.innerHTML = data[i].surname;
-            document.body.appendChild(surElem);
+            document.getElementById("content").appendChild(surElem);
 
             const emailElem = document.createElement("div")
             emailElem.innerHTML = data[i].email;
-            document.body.appendChild(emailElem);
+            document.getElementById("content").appendChild(emailElem);
 
             const berichtElem = document.createElement("div")
             berichtElem.innerHTML = data[i].bericht;
-            document.body.appendChild(berichtElem);
+            document.getElementById("content").appendChild(berichtElem);
 
             const bodElem = document.createElement("div")
             bodElem.innerHTML = data[i].bod;
-            document.body.appendChild(bodElem);
+            document.getElementById("content").appendChild(bodElem);
 
             const villaElem = document.createElement("div")
             villaElem.innerHTML = data[i].villa;
-            document.body.appendChild(villaElem);
+            document.getElementById("content").appendChild(villaElem);
         };
         }
         xmlhttp.send();
