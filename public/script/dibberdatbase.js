@@ -23,29 +23,36 @@ function fetch() {
 
         for(let i = 0; i < data.length; i++){
             console.log(i);
+            // new elem
+            const container = document.createElement("div");
+            container.className = "container";
+            container.id = `container${i}`;
+
             const naamElem = document.createElement("div")
             naamElem.innerHTML = data[i].naam;
-            document.getElementById("content").appendChild(naamElem);
+            container.appendChild(naamElem);
 
             const surElem = document.createElement("div")
             surElem.innerHTML = data[i].surname;
-            document.getElementById("content").appendChild(surElem);
+            container.appendChild(surElem);
 
             const emailElem = document.createElement("div")
             emailElem.innerHTML = data[i].email;
-            document.getElementById("content").appendChild(emailElem);
+            container.appendChild(emailElem);
 
             const berichtElem = document.createElement("div")
             berichtElem.innerHTML = data[i].bericht;
-            document.getElementById("content").appendChild(berichtElem);
+            container.appendChild(berichtElem);
 
             const bodElem = document.createElement("div")
             bodElem.innerHTML = data[i].bod;
-            document.getElementById("content").appendChild(bodElem);
+            container.appendChild(bodElem);
 
             const villaElem = document.createElement("div")
             villaElem.innerHTML = data[i].villa;
-            document.getElementById("content").appendChild(villaElem);
+            container.appendChild(villaElem);
+
+            document.getElementById("mess").appendChild(container)
         };
         }
         xmlhttp.send();
