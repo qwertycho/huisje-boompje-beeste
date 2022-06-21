@@ -38,9 +38,9 @@ app.get('/datar', function (req, res) {
 	});
 
 	class dbData {
-		constructor(naam, surname, email, bericht, bod, villa){
+		constructor(naam, sirname, email, bericht, bod, villa){
 			this.naam = naam;
-			this.surname = surname;
+			this.surname = sirname;
 			this.email = email;
 			this.bericht = bericht;
 			this.bod = bod;
@@ -52,7 +52,7 @@ app.get('/datar', function (req, res) {
 let i = 0;
 	db.each("SELECT * FROM formdata", function(err, row) {
 		if(err) return console.log(err.message);
-		let data =  new dbData(row.naam, row.surname, row.email, row.bericht, row.bod, row.villa);
+		let data =  new dbData(row.naam, row.sirname, row.email, row.bericht, row.bod, row.villa);
 		array.push(data);
 		i++;
 		if(array.length > 1){
