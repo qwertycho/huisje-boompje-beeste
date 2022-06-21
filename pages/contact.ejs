@@ -41,17 +41,7 @@
     </style>
 </head>
 <body>
-    <header class="h-28 w-full bg-top bg-center grid grid-cols-1 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1">
-        <div class="flex flex-col justify-center items-center col-span-1">
-            <img src="img/logo.svg" alt="" class="h-16">
-        </div>
-        <div class="hidden lg:block"></div>
-        <div class="hidden lg:block"></div>
-        <div class="flex flex-row justify-center items-center">
-            <a href="" class="text-white text-2xl hover:text-slate-300 mx-8">Home</a>
-            <a href="/contact" class="text-white text-2xl hover:text-slate-300 mx-8">Contact</a>
-        </div>
-    </header>
+    <%- include('../public/components/header.ejs') %>
     <section id="location" class="mx-auto w-9/12 bg-black mt-3 h-80 rounded-lg grid grid-rows-1 grid-cols-2">
         <div id="contactinfo">
             <table class="text-white text-xl mx-auto h-48" style="margin-top: 8%">
@@ -92,15 +82,15 @@
                 <table class="w-full" style="">
                     <tr>
                         <td class="lg:w-48">Vooraam</td>
-                        <td><input required type="text" name="name" id="name" class="w-full border-2 border-white rounded-lg my-2"></td>
+                        <td><input required type="text" name="name" id="name" class="w-full border-2 border-white rounded-lg my-2 text-black"></td>
                     </tr>
                     <tr>
                         <td class="lg:w-48">Achternaam</td>
-                        <td><input required type="text" name="sirname" id="sirname" class="w-full border-2 border-white rounded-lg my-2"></td>
+                        <td><input required type="text" name="sirname" id="sirname" class="w-full border-2 border-white rounded-lg my-2 text-black"></td>
                     </tr>
                     <tr>
                         <td class="lg:w-48">E-mail</td>
-                        <td><input required type="text" name="email" id="email" class="w-full border-2 border-white rounded-lg my-2"></td>
+                        <td><input required type="text" name="email" id="email" class="w-full border-2 border-white rounded-lg my-2 text-black"></td>
                     </tr>
                     <tr>
                         <td class="lg:w-48">Gekozen villa:</td>
@@ -116,11 +106,11 @@
                     
                     <tr>
                         <td class="lg:w-48">Bod in €</td>
-                        <td><input required type="number" name="bod" id="bod" class="w-full border-2 border-white rounded-lg my-2"></td>
+                        <td><input required type="number" name="bod" id="bod" class="w-full border-2 border-white rounded-lg my-2 text-black"></td>
                     </tr>
                     <tr>
                         <td class="lg:w-48">Bericht</td>
-                        <td><textarea required name="message" id="message" class="w-full border-2 border-white rounded-lg my-2"></textarea></td>
+                        <td><textarea required name="message" id="message" class="w-full border-2 border-white rounded-lg my-2 text-black"></textarea></td>
                     </tr>
                     <tr>
                         <td class="lg:w-48"></td>
@@ -141,5 +131,6 @@
             </div>
         </div>
     </section>
+    <%- include('../public/components/footer.ejs') %>
 </body>
 </html>
