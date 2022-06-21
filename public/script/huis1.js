@@ -22,7 +22,7 @@ Huis1.style.backgroundImage = `url("${huis.fotos[0]}")`;
 volgende.addEventListener("click", houseClickUp);
 
 function houseClickUp() {
-    if (photoCount !== 7){
+    if (photoCount !== 4){
         photoCount++;
         Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     } else {
