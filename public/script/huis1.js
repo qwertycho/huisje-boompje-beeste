@@ -1,4 +1,4 @@
-import db from "./Database.js"
+import db from "/database.js"
 let huis = document.querySelector(".zoeker").id
 let volgende = document.getElementById("volgende")
 let terug = document.getElementById("terug")
