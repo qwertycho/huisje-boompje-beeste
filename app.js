@@ -29,12 +29,11 @@ app.get('/datar', function (req, res) {
 	  console.log(err);
 	}
 
-	let ID = 999;
+	let ID = 3;
 
 	db.each("SELECT * FROM formdata ORDER BY ID DESC LIMIT 1", function(err, row) {
 		if(err) return console.log(err.message);
-		ID = row.ID;
-		ID++;
+		// ID = row.ID;
 		console.log("id = " + ID);
 	});
 
