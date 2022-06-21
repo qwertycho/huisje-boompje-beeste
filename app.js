@@ -55,7 +55,7 @@ let i = 0;
 		let data =  new dbData(row.naam, row.surname, row.email, row.bericht, row.bod, row.villa);
 		array.push(data);
 		i++;
-		if(array.length == 2){
+		if(array.length == 3){
 			if(res.headersSent !== true) {
 				console.log(array);
 				res.send(JSON.stringify(array));
