@@ -29,7 +29,7 @@ app.get('/datar', function (req, res) {
 	  console.log(err);
 	}
 
-	let ID = 3;
+	let ID = 0;
 
 	db.each("SELECT * FROM formdata ORDER BY ID DESC LIMIT 1", function(err, row) {
 		if(err) return console.log(err.message);
@@ -50,12 +50,13 @@ app.get('/datar', function (req, res) {
 
 	let array = [];
 let i = 0;
-	db.each("SELECT * FROM formdata", function(err, row) {
+	db.each("SELECT * FROM formdata ORDER BY ID DESC LIMIT 5", function(err, row) {
 		if(err) return console.log(err.message);
+		ID++
 		let data =  new dbData(row.naam, row.sirname, row.email, row.bericht, row.bod, row.villa);
 		array.push(data);
 		i++;
-		if(array.length > 1){
+		if(array.length == ID){
 			if(res.headersSent !== true) {
 				console.log(array);
 				res.send(JSON.stringify(array));
