@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="/script/huis1.js" type="module"></script>
+
 
     <script>
         tailwind.config = {
@@ -93,11 +95,12 @@
 </head>
 <body>
     <%- include('../public/components/header.ejs') %>
+    <div class="zoeker" id="Hoekwoning"></div>
 <main class="grid grid-cols-2 grid-rows-1 min-h-full w-80p mx-auto mt-5" style="min-height: 80vh">
     <div class="grid grid-rows-2 grid-cols-1">
             <div id="huis1" class="items-center w-10/12 h-5/6 rounded-3xl bg-cover grid grid-cols-10 grid-rows-11" style="background-image: url('img/huis-1/1.jpg')">
-                <i class="bi bi-arrow-left bg-white p-2 rounded-lg -ml-2 shadow-xl" style="grid-column: 0/1; grid-row: 6/7; text-align: center;" onclick="houseClickDown()"></i>
-                <i class="bi bi-arrow-right bg-white p-2 rounded-lg -mr-2 shadow-xl" style="grid-column: 10/11; grid-row: 6/7; text-align: center;"onclick="houseClickUp()"></i>
+                <i class="bi bi-arrow-left bg-white p-2 rounded-lg -ml-2 shadow-xl" style="grid-column: 0/1; grid-row: 6/7; text-align: center;" id="terug"></i>
+                <i class="bi bi-arrow-right bg-white p-2 rounded-lg -mr-2 shadow-xl" style="grid-column: 10/11; grid-row: 6/7; text-align: center;" id="volgende"></i>
             </div>
 
 
@@ -106,23 +109,22 @@
 
     <div class="bg-black rounded-3xl w-9/12 h-5/6 mx-auto my-auto text-white">
         <div class="grid grid-cols-1 grid-rows-6 h-56 w-9/12 mx-auto">
-            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Dijkvilla • Bouwjaar 2022</div>
-                <div class="font-bold text-3xl items-center ml-1 flex">€ 3.200.000</div>
-                <div class="font-bold text-m items-center ml-1 flex">1398 AA Muiden, Nr. 60</div>
+            <div class="uppercase text-xs font-bold ml-1 flex align-center items-center">Villa, Hoekwoning • Bouwjaar 2022</div>
+                <div class="font-bold text-3xl items-center ml-1 flex">€ 2.500.000</div>
+                <div class="font-bold text-m items-center ml-1 flex">1398 CP Muiden, Nr. 4.1</div>
                 <div class="grid grid-cols-2 grid-rows-1">
                     <div class="flex items-center justify-center text-s">
                         <i class="fa-solid fa-bed ml-1"></i>
-                        <b class="mr-1 ml-1 text-sm">5</b> <span class="text-sm">slaapkamers</span>
+                        <b class="mr-1 ml-1 text-sm">3</b> <span class="text-sm">slaapkamers</span>
                     </div>
                     <div class="flex items-center justify-center text-s">
                         <i class="fa-solid fa-bath ml-1"></i>
-                        <b class="mr-1 ml-1 text-sm">2</b> <span class="text-sm">badkamers</span>
+                        <b class="mr-1 ml-1 text-sm">3</b> <span class="text-sm">badkamers</span>
                     </div>
 
                 </div>
                 <p class="pt-8">
-                    De villa kent op de begane grond een grote inpandige berging/bijkeuken, een ruime werkkamer, toilet en een grote woonkeuken. Vanuit de begane grond bereiken we de aan het water gelegen tuin welke zich rondom de villa bevindt. Met een prive brug komen we aan de overkant van de watergang (ca 9,5 breed), de overtuin. Deze overtuinen kennen breedtes van 16,5 tot 21 meter en dieptes van 37 - 56 meter. Dit zijn afmetingen waar je oneindig veel mogelijkheden mee hebt. In deze overtuin is het mogelijk om een mulifunctionele ruimte/berging te creëeren tot 24 m2 groot alsmede een kas van deze afmeting. Vanuit de volledig omhaagde overtuin bereik je middels een hekje de dijk van het IJmeer waar vanuit je heerlijk kunt fietsen, wandelen of het strand kunt bereiken. 
-                </p>
+                    'Frontrow' aan het IJmeer. De Krijgsman Muiden is uniek door de ligging aan het IJmeer. Vanuit uw raam of het dakterras kijkt u uit over het IJmeer. De grote ramen veranderen door het prachtige uitzicht in levende schilderijen. Het uitzicht spat van het doek! De appartementen van Loods IV liggen aan vaarwater en worden aan de zuidzijde omringd door groen. Deze unieke ligging nodigt uit tot een bijzondere buitenbeleving, elk seizoen opnieuw. Zeilen op het IJmeer of met de eigen sloep varen naar Amsterdam, borrelen in de gezellige vestingstad Muiden. Het kan allemaal. En dat op slechts 15 minuten van Amsterdam.                 </p>
         </div>
     </div>
 

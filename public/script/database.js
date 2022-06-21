@@ -5,7 +5,7 @@ let Dijkvilla1 = {
     prijs: "€3200000",
     fotos: ["img/huis-1/1.jpg", "img/huis-1/2.jpg", "img/huis-1/3.jpg, img/huis-1/4.jpg", "img/huis-1/5.jpg", "img/huis-1/6.jpg", "img/huis-1/7.jpg", "img/huis-1/8.jpg"],
     contact: "verkoper1",
-    waarde: "Dijkvilla1"
+    waarde: "Dijkvilla1",
 }
 
 let Dijkvilla2 = {
@@ -14,7 +14,7 @@ let Dijkvilla2 = {
     prijs: "€3150000",
     fotos: ["img/huis-2/1.jpg", "img/huis-2/2.jpg", "img/huis-2/3.jpg, img/huis-2/4.jpg", "img/huis-2/5.jpg", "img/huis-2/6.jpg", "img/huis-2/7.jpg", "img/huis-2/8.jpg"],
     contact: "verkoper1",
-    waarde: "Dijkvilla2"
+    waarde: "Dijkvilla2",
 }
 
 let Hoekwoning = {
