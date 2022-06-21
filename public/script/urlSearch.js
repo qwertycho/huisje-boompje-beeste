@@ -28,7 +28,9 @@ if (huis == undefined || huis == "") {
   }
   
   const userSelect = document.getElementById("villa");
+  const bod = document.getElementById("bod");
   userSelect.value = huis.waarde;
+  bod.value = huis.prijs;
   document.getElementById("foto1").style.backgroundImage = "url(" + huisFoto1 + ")";
   document.getElementById("foto2").style.backgroundImage = "url(" + huisFoto2 + ")";
 

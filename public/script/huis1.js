@@ -7,7 +7,7 @@ let photoCount = 0;
 let Huis1 = document.getElementById("huis1");
 
 for (let i = 0; i < db.length; i++) {
-    if (db[i].naam == huis) {
+    if (db[i].waarde == huis) {
     huis = db[i];
     document.getElementById("contactButton").setAttribute("href", `/contact?${huis.waarde}`)
     }
@@ -26,6 +26,7 @@ function houseClickUp() {
         photoCount = 0;
         Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     }
+    console.log(maxFoto);
 }
 
 terug.addEventListener("click", houseClickDown);
