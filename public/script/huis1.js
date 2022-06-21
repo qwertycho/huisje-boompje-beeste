@@ -1,27 +1,46 @@
+import db from "./Database.js"
+let huis = document.querySelector(".zoeker").id
+let volgende = document.getElementById("volgende")
+let terug = document.getElementById("terug")
+
+let photoCount = 0;
 let Huis1 = document.getElementById("huis1");
 
-Huis1.style.backgroundImage = "url('../img/huis-1/1.jpg')";
+console.log(huis);
 
-let photoCount = 1;
+for (let i = 0; i < db.length; i++) {
+    if (db[i].naam == huis) {
+      huis = db[i];
+    document.getElementById("contactButton").setAttribute("href", `/contact?${huis.waarde}`)
+    // getelem.style.img = huis.fotos[0]
+    }
+}
 
 
+Huis1.style.backgroundImage = `url("${huis.fotos[0]}")`;
+
+volgende.addEventListener("click", houseClickUp);
 
 function houseClickUp() {
-    if (photoCount !== 8){
+    if (photoCount !== 7){
         photoCount++;
-        Huis1.style.backgroundImage = "url('../img/huis-1/" + photoCount + ".jpg')";
+        Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     } else {
-        photoCount = 1;
-        Huis1.style.backgroundImage = "url('../img/huis-1/" + photoCount + ".jpg')";
+        photoCount = 0;
+        Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     }
 }
 
+terug.addEventListener("click", houseClickDown);
+
 function houseClickDown() {
-    if (photoCount !== 1){
+    if (photoCount !== 0){
         photoCount--;
-        Huis1.style.backgroundImage = "url('../img/huis-1/" + photoCount + ".jpg')";
+        Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     } else {
-        photoCount = 8;
-        Huis1.style.backgroundImage = "url('../img/huis-1/" + photoCount + ".jpg')";
+        photoCount = 7;
+        Huis1.style.backgroundImage = `url("${huis.fotos[photoCount]}")`
     }
 }
+
+console.log(huis);
