@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script src="script/dibberdatbase.js" defer></script>
         <script>
             // make cookie
                 document.cookie = "login=true; expires=Thu, 18 Dec 2050 12:00:00 UTC"; 
@@ -47,6 +48,8 @@
         </style>
     </head>
 <body>
-    
+    <%- include('../../public/components/header.ejs') %>
+    <div id="content"></div>
+    <%- include('../../public/components/footer.ejs') %>
 </body>
 </html>
