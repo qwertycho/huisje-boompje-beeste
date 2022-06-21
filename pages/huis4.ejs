@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="/script/huis1.js" type="module"></script>
 
     <script>
         tailwind.config = {
@@ -89,16 +90,16 @@
             }
         }
     </style>
-    <script src="script/huis1.js" defer></script>
 </head>
 <body>
     <%- include('../public/components/header.ejs') %>
+    <div class="zoeker" id="villa4"></div>
 <main class="grid grid-cols-2 grid-rows-1 min-h-full w-80p mx-auto mt-5" style="min-height: 80vh">
     <div class="grid grid-rows-2 grid-cols-1">
-            <div id="huis1" class="items-center w-10/12 h-5/6 rounded-3xl bg-cover grid grid-cols-10 grid-rows-11" style="background-image: url('img/huis-1/1.jpg')">
-                <i class="bi bi-arrow-left bg-white p-2 rounded-lg -ml-2 shadow-xl" style="grid-column: 0/1; grid-row: 6/7; text-align: center;" onclick="houseClickDown()"></i>
-                <i class="bi bi-arrow-right bg-white p-2 rounded-lg -mr-2 shadow-xl" style="grid-column: 10/11; grid-row: 6/7; text-align: center;"onclick="houseClickUp()"></i>
-            </div>
+        <div id="huis1" class="items-center w-10/12 h-5/6 rounded-3xl bg-cover grid grid-cols-10 grid-rows-11" style="background-image: url('img/huis-1/1.jpg')">
+            <i class="bi bi-arrow-left bg-white p-2 rounded-lg -ml-2 shadow-xl" style="grid-column: 0/1; grid-row: 6/7; text-align: center;" id="terug"></i>
+            <i class="bi bi-arrow-right bg-white p-2 rounded-lg -mr-2 shadow-xl" style="grid-column: 10/11; grid-row: 6/7; text-align: center;" id="volgende"></i>
+        </div>
 
 
             <iframe class="w-full rounded-lg" style="height:80%" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d609.4654891446177!2d5.063010099040859!3d52.336650355862936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1snl!2snl!4v1655547664399!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
