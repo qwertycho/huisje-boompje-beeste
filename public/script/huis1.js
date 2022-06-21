@@ -3,7 +3,7 @@ let Huis1 = document.getElementById("huis1");
 Huis1.style.backgroundImage = "url('../img/huis-1/1.jpg')";
 
 let photoCount = 1;
-
+    
 
 
 function houseClickUp() {
