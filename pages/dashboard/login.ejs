@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+        <script src="script/cookie.js" defer></script>
         <script>
             tailwind.config = {
                 theme: {
@@ -50,17 +50,17 @@
             <table>
                 <tr>
                     <td>
-                        <input class="bg-slate-200 rounded-md" placeholder="Username" type="text" id="username">
+                        <input required class="bg-slate-200 rounded-md" placeholder="Username" type="text" id="username">
                     </td>
                     
                 </tr>
                 <tr>
                     <td>
-                        <input class="bg-slate-200 rounded-md" placeholder="Password" type="password" id="password">
+                        <input required class="bg-slate-200 rounded-md" placeholder="Password" type="password" id="password">
                     </td>
                 </tr>
             </table>
-            <input type="submit" value="Login" class="bg-slate-200 rounded-md">
+            <input type="submit" value="Login" class="bg-slate-200 rounded-md" id="knop">
         </div>
     </main>
 </body>
